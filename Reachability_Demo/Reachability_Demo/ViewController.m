@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "AppDelegate.h"
+#import "Reachability.h"
 
 @interface ViewController ()
 {
@@ -28,9 +28,9 @@
 }
 
 - (IBAction)getCurrentReachability:(UIButton *)sender {
-    AppDelegate * appDele = [UIApplication sharedApplication].delegate;
+    Reachability * reach = [Reachability reachabilityForInternetConnection];
     NSString * tips = @"";
-    switch (appDele.hostReach.currentReachabilityStatus)
+    switch (reach.currentReachabilityStatus)
     {
         case NotReachable:
             tips = @"无网络连接";
@@ -40,6 +40,8 @@
             tips = @"Wifi";
             break;
             
+        case ReachableViaWWAN:
+            NSLog(@"移动流量");
         case kReachableVia2G:
             tips = @"2G";
             break;

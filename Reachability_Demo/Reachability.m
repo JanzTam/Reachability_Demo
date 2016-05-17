@@ -228,11 +228,8 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
         }
     }
 
-	if ((flags & kSCNetworkReachabilityFlagsIsWWAN) == kSCNetworkReachabilityFlagsIsWWAN)
-	{
-		/*
-         ... but WWAN connections are OK if the calling application is using the CFNetwork APIs.
-         */
+    if ((flags & kSCNetworkReachabilityFlagsIsWWAN) == kSCNetworkReachabilityFlagsIsWWAN)
+    {
         if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
         {
             
@@ -268,7 +265,8 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
             return returnValue;
         }
         
-	}
+        returnValue = ReachableViaWWAN;
+    }
     
 	return returnValue;
 }

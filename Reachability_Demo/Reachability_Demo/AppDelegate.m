@@ -44,7 +44,7 @@
             
         case ReachableViaWiFi:
             break;
-            
+        case ReachableViaWWAN:
         case kReachableVia2G:
             break;
             

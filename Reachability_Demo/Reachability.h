@@ -12,8 +12,9 @@
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 
 typedef enum : NSInteger {
-	NotReachable = 0,
-	ReachableViaWiFi,
+    NotReachable = 0,
+    ReachableViaWiFi,
+    ReachableViaWWAN,
     kReachableVia2G,
     kReachableVia3G,
     kReachableVia4G

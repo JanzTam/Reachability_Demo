@@ -115,7 +115,7 @@
 				TargetAttributes = {
 					14CEB28D1C10095D004EC196 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = HG624GX8VP;
+						DevelopmentTeam = AGN67TQEF4;
 					};
 				};
 			};
@@ -307,6 +307,7 @@
 				14CEB2A71C10095D004EC196 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
